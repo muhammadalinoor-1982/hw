@@ -3,9 +3,19 @@
 {% block body %}
 
     <div class="container">
+
+    {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
         <div class="row">
             <div class="col-lg-4">
-                <form>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
                     <div class="form-group">
                         <label>name</label>
                         <input type="text" name="name" class="form-control" placeholder="Enter Name">

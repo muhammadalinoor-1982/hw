@@ -20,7 +20,7 @@ class Profile(models.Model):
     name =      models.CharField    (max_length=30, null=True, blank=True)
     image =     models.ImageField   (upload_to='profile_pic/', default='default/no_img.jpg', null=True, blank=True)
     email =     models.EmailField   (max_length=30, null=True, blank=True)
-    age =       models.PositiveIntegerField(null=True, blank=True)
+    age =       models.CharField    (max_length=2, null=True, blank=True)
     address =   models.TextField    (max_length=300, null=True, blank=True)
     phone =     models.TextField    (max_length=15, null=True, blank=True)
     dob =       models.TextField    (max_length=15, null=True, blank=True)
