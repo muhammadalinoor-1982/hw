@@ -21,8 +21,8 @@
                     <a class="nav-link" href="{% url 'create' %}">Add User</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline my-2 my-lg-0" method="GET">
+                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
@@ -47,8 +47,10 @@
                         <img class="card-img-top" src="{{ i.image.url }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ i.email }}</h5>
-                            <p class="card-text">{{ i.address }}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">{{ i.religion }}</p>
+                            <p class="card-text">{{ i.age }}</p>
+                            <a href="#" class="btn btn-success">Profile</a>
+                            <a href="{% url 'delete' i.id %}" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>
