@@ -75,7 +75,13 @@ def delete(Request, id):
     return redirect(main)
 
 
+def detailsProfile(Request, id):
+    prof = Profile.objects.get(id=id)
+    return render(Request,'detailsProfile.html', locals())
 
+def update(Request, id):
+    prof = Profile.objects.get(id=id)
+    return render(Request, 'update.html', locals())
 
 
 

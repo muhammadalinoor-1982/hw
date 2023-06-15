@@ -21,11 +21,11 @@
                     <a class="nav-link" href="{% url 'create' %}">Add User</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" method="GET">
-                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
+        <form class="form-inline my-2 my-lg-0" method="GET">
+            <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
     </nav><br>
 
     {% block body %}
@@ -49,7 +49,7 @@
                             <h5 class="card-title">{{ i.email }}</h5>
                             <p class="card-text">{{ i.religion }}</p>
                             <p class="card-text">{{ i.age }}</p>
-                            <a href="#" class="btn btn-success">Profile</a>
+                            <a href="{% url 'detailsProfile' i.id %}" class="btn btn-success">Profile Details</a>
                             <a href="{% url 'delete' i.id %}" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
