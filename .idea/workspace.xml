@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aa0af30-2af4-4e67-89f9-45724c9aabd0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/template/detailsProfile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/First.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/First.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profile_pic/07.04.2021_1617808256_5092_STFL_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profile_pic/22.03.2021_1616387603_9340_STFL_archetypal-male-fa_3249635c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profile_pic/_DSC0479.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,13 +138,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/python/projects/hw"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/python/projects/hw&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -231,7 +232,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685330812716</updated>
-      <workItem from="1686836347685" duration="8994000" />
+      <workItem from="1686836347685" duration="9818000" />
+      <workItem from="1686884378388" duration="1526000" />
+      <workItem from="1687311332364" duration="9606000" />
     </task>
     <servers />
   </component>

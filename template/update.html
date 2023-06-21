@@ -41,7 +41,7 @@
                         <br>
                         <label>Religion</label>
                         <select name="religion" class="custom-select">
-                        <option selected>Please select religion</option>
+                        <option value="{{ prof.religion }}">{{ prof.religion }}</option>
                         <option value="Islam">Islam</option>
                         <option value="Hinduism">Hinduism</option>
                         <option value="Buddhism">Buddhism</option>
@@ -51,14 +51,14 @@
                         <br><br>
                         <label>Gender</label>
                         <select name="gender" class="custom-select">
-                        <option selected>Please select gender</option>
+                        <option value="{{ prof.gender }}">{{ prof.gender }}</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Others">Others</option>
                         </select>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                 </form>
             </div>
         </div>

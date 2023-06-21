@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from .models import Profile
 from django.db.models import Q
+import os
 
 # Create your views here.
 def main(Request):
@@ -70,6 +71,8 @@ def create(Request):
 
 def delete(Request, id):
     prof = Profile.objects.get(id=id)
+    if prof.image != 'default/no_img.jpg':
+        os.remove(prof.image.path)
     prof.delete()
     messages.error(Request, 'Profile has been deleted successfully')
     return redirect(main)
@@ -81,6 +84,35 @@ def detailsProfile(Request, id):
 
 def update(Request, id):
     prof = Profile.objects.get(id=id)
+    if Request.method == 'POST':
+        # if len(Request.FILES.get('image')) !=0:
+        if Request.FILES.get('image') != None:
+            if prof.image != 'default/no_img.jpg':
+                os.remove(prof.image.path)
+            prof.name       = Request.POST.get('name')
+            prof.image      = Request.FILES.get('image')
+            prof.email      = Request.POST.get('email')
+            prof.age        = Request.POST.get('age')
+            prof.address    = Request.POST.get('address')
+            prof.phone      = Request.POST.get('phone')
+            prof.dob        = Request.POST.get('dob')
+            prof.religion   = Request.POST.get('religion')
+            prof.gender     = Request.POST.get('gender')
+            prof.save()
+            messages.success(Request, 'Profile Updated Successfully')
+            return redirect('main')
+        else:
+            prof.name       = Request.POST.get('name')
+            prof.email      = Request.POST.get('email')
+            prof.age        = Request.POST.get('age')
+            prof.address    = Request.POST.get('address')
+            prof.phone      = Request.POST.get('phone')
+            prof.dob        = Request.POST.get('dob')
+            prof.religion   = Request.POST.get('religion')
+            prof.gender     = Request.POST.get('gender')
+            prof.save()
+            messages.success(Request, 'Profile Updated Successfully')
+            return redirect('main')
     return render(Request, 'update.html', locals())
 
 
